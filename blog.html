@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>InnoVision</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="InnoVision Logo">
+                <!-- <h2>Inno<span>Vission</span></h2> -->
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="menu" id="menu">
+                <img src="images/logo.png" alt="InnoVision Logo">
+                <ul class="nav-link">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="domains.html">Domains</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="blog" class="blog">
+        <div class="domains-content">
+            <h2>Our <span>Blog</span></h2>
+            <p>Stay updated with the latest trends, tips, and insights from the world of technology and education.</p>
+            <div class="courses">
+                <div class="course-card">
+                    <!-- <img src="path/to/blog2.jpg" alt="Blog 2" class="blog-image"> -->
+                    <div class="course-info">
+                        <h3>Introduction to Quantum Computing</h3>
+                        <p>Learn about the basics of quantum computing and how it differs from classical computing.</p>
+                        <a href="blog2.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <!-- <img src="path/to/blog4.jpg" alt="Blog 4" class="blog-image"> -->
+                    <div class="course-info">
+                        <h3>Future of Blockchain</h3>
+                        <p>Discover how blockchain technology is revolutionizing various sectors and what the future holds for this innovative technology.</p>
+                        <a href="blog4.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <!-- <img src="images/blog3.jpg" alt="Blog 3" class="blog-image"> -->
+                    <div class="course-info">
+                        <h3>Advancements in AI</h3>
+                        <p>Explore the latest advancements in artificial intelligence and their impact on various industries.</p>
+                        <a href="blog3.html" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <a href="blog.html" class="explore-more">Explore More Blogs</a>
+        <script>
+            // Function to check if an element is in the viewport
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top < window.innerHeight &&
+                    rect.bottom >= 0
+                );
+            }
+
+            function revealOnScroll() {
+                const domainsSection = document.querySelector('#blog');
+                if (isInViewport(domainsSection)) {
+                    domainsSection.classList.add('revealed');
+                }
+            }
+            window.addEventListener('scroll', revealOnScroll);
+
+            revealOnScroll();
+
+        </script>
+         <style>
+            #blog {
+                justify-content: center;
+                margin-top: 100px;
+            }
+            #blog .explore-more {
+                display: none;
+            }
+        </style>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Sitemap</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="domains.html">Domains</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Courses</h3>
+                <ul>
+                    <li><a href="#">Programming</a></li>
+                    <li><a href="#">Data Science</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Business</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Webinars</a></li>
+                    <li><a href="#">E-books</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">Getting started</a></li>
+                    <li><a href="#">Network status</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Referral program</a></li>
+                </ul>
+            </div>
+            <div class="footer-section subscribe">
+                <h3>Subscribe</h3>
+                <input type="email" placeholder="Enter email address" id="email">
+                <button onclick="subscribe()">Send</button>
+                <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+                <select class="language-select">
+                    <option>Select Language</option>
+                    <option>English</option>
+                    <option>Telugu</option>
+                    <option>Hindi</option>        
+                </select>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&COPY;2024 All rights reserved.</p>
+            <p class="company-name">Innovision</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+   
+        
+    </body>
